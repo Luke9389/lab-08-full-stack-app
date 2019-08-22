@@ -15,15 +15,15 @@ client.connect()
                 type VARCHAR(256) NOT NULL,
                 url VARCHAR(256) NOT NULL,
                 year INTEGER NOT NULL,
-                desc VARCHAR(2048) NOT NULL,
+                description TEXT NOT NULL,
                 is_multiplayer BOOLEAN NOT NULL
             );
-        `);
+    `);
     })
     .then(
         () => console.log('create tables complete'),
         err => console.log(err)
     )
-    .then(() =>{
+    .then(() => {
         client.end();
     });

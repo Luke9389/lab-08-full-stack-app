@@ -19,8 +19,27 @@ app.use(morgan('dev')); // http logging
 app.use(cors()); // enable CORS request
 app.use(express.static('public'));
 
+
 app.get('/api/games', (req, res) => {
-    
+    client.query(`
+        SELECT
+            id,
+            name,
+            type,
+            url,
+            year,
+            description,
+            is_multiplayer "isMultiplayer"
+        FROM GAMES;
+    `)
+        .then(result => {
+            res.json(result.rows);
+        })
+        .catch(err => {
+            res.status(500).json({
+                error: err.message || err
+            });
+        });
 });
 
 // Start the server

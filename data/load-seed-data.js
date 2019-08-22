@@ -10,10 +10,10 @@ client.connect()
         return Promise.all(
             games.map(game=> {
                 return client.query(`
-                    INSERT INTO games (name, type, url, year, desc, is_multiplayer)
+                    INSERT INTO games (name, type, url, year, description, is_multiplayer)
                     VALUES ($1, $2, $3, $4, $5, $6);
                 `,
-                [game.name, game.type, game.url, game.year, game.desc, game.is_multiplayer]
+                [game.name, game.type, game.url, game.year, game.desc, game.isMultiplayer]
                 );
             })
         );
