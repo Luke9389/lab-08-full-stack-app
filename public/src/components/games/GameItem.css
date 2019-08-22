@@ -1,0 +1,31 @@
+.game-rec-wrapper {
+    display: grid;
+    grid-template-columns: 8rem auto;
+    grid-template-areas: "img info";
+    background-color: #ffffff;
+    margin: 0.5rem;
+    border: solid 2px 
+}
+
+.game-img-wrapper {
+    grid-area: img;
+    height: 100%;
+    width: 8rem;
+}
+
+.game-img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: 100%;
+    width: 100%
+}
+
+.game-info-section {
+    grid-area: info;
+    margin-left: 0.4rem;
+}
+
+.game-info-section h2 {
+    font-family: 'Knewave', cursive;
+    color: #193551;
+}

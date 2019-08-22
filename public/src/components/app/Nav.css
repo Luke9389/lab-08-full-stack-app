@@ -1,0 +1,14 @@
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    background-color: #0077C6;
+    align-items: center;
+}
+
+nav a {
+    margin-top: 1rem;
+    font-family: 'Knewave', cursive;
+    color: #ffffff;
+    text-decoration: none;
+}

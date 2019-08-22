@@ -1,0 +1,38 @@
+#layout-wrapper {
+    display: grid;
+    grid-template-columns: 6rem auto;
+    grid-template-rows: 6rem auto;
+    grid-template-areas: "title title" "nav main";
+}
+
+header {
+    grid-area: title;
+    font-size: 3rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    background-color: #193551;
+    font-family: 'Knewave', cursive;
+    color: #ffffff;
+}
+
+
+
+main {
+    grid: main;
+    background-color: #A5A5A5;
+}
+
+@media(max-width: 542px) {
+    #layout-wrapper {
+        display: grid;
+        grid-template-rows: 10rem 5rem auto;
+        grid-template-columns: auto;
+        grid-template-areas: "title" "nav" "main";
+    }
+    nav{
+        flex-direction: row;
+    }
+    nav a{
+        margin: 0 1rem;
+    }
+}
