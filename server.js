@@ -22,3 +22,8 @@ app.use(express.static('public'));
 app.get('/api/games', (req, res) => {
     
 });
+
+// Start the server
+app.listen(PORT, () => {
+    console.log('server running on PORT', PORT);
+});
