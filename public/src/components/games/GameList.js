@@ -4,7 +4,6 @@ import GameItem from './GameItem.js';
 class GameList extends Component {
 
     onRender(dom){
-        console.log(this.props);
         const list = this.props.games;
 
         list.forEach(game => {

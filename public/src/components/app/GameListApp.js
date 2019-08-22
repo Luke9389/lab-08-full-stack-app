@@ -19,7 +19,6 @@ class GameListApp extends Component {
         main.appendChild(list.renderDOM());
 
         getGames().then(games => {
-            console.log('gamelist thinks:', games);
             list.update({ games });
         });
     }
