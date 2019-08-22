@@ -12,7 +12,7 @@ class GameItem extends Component {
                 <div class="game-info-section">
                     <h2>${game.name}</h2>
                     <p class="game-type">${game.type}</p>
-                    <p class="game-desc">${game.desc}</p>
+                    <p class="game-desc">${game.description}</p>
                 </div>
             </div>
         `;
