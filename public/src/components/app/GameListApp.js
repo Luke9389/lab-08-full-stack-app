@@ -14,7 +14,6 @@ class GameListApp extends Component {
         const header = new Header({ title: 'Game Recommendations' });
         dom.prepend(header.renderDOM());
 
-        console.log('GameList.js thinks list is:', games);
         const list = new GameList({ list: games });
         const main = dom.querySelector('main');
         main.appendChild(list.renderDOM());
