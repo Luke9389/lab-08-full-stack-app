@@ -10,6 +10,7 @@ client.connect()
     .then(() => {
         return client.query(`
             DROP TABLE IF EXISTS games;
+            DROP TABLE IF EXISTS types;
         `);
     })
     .then(

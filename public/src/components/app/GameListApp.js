@@ -18,9 +18,10 @@ class GameListApp extends Component {
         const main = dom.querySelector('main');
         main.appendChild(list.renderDOM());
 
-        getGames().then(games => {
-            list.update({ games });
-        });
+        getGames()
+            .then(games => {
+                list.update({ games });
+            });
     }
 
     renderHTML() {
