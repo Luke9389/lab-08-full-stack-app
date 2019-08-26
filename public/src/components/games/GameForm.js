@@ -7,20 +7,21 @@ class GameForm extends Component {
         form.addEventListener('submit', event => {
             event.preventDefault();
 
-            const formData = new FormData(form);
+            const formDaddy = new FormData(form);
 
             const game = {
-                name: formData.get('name'),
-                typeId: +formData.get('type-id'),
-                url: formData.get('url'),
-                year: +formData.get('year'),
-                desc: formData.get('desc'),
-                isMultiplayer: formData.get('is-multiplayer') === 'on'
+                name: formDaddy.get('name'),
+                typeId: +formDaddy.get('type-id'),
+                url: formDaddy.get('url'),
+                year: +formDaddy.get('year'),
+                desc: formDaddy.get('desc'),
+                isMultiplayer: formDaddy.get('is-multiplayer') === 'on'
             };
 
             addGame(game)
-                .then((/*saved*/) => {
-                    window.location = `game-list.html`;
+                .then((res) => {
+                    console.log(res);
+                    // window.location = `game-list.html`;
                 })
                 .catch(err => {
                     console.log('game not saved. fool.', err);
@@ -69,7 +70,7 @@ class GameForm extends Component {
 
                 <section>
                     <label for="desc">Description</label>
-                    <input id="desc" required>
+                    <input id="desc" name="desc" required>
                 </section>
 
                 <fieldset for="is-mulitplayer">

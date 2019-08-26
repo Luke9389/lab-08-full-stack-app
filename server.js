@@ -80,8 +80,9 @@ app.get('/app/games/:id', (req, res) => {
 
 app.post('/api/games', (req, res) => {
     const game = req.body;
+    console.log(game);
     client.query(`
-        INSERT INTO games (name, type_id, url, year, desc, is_multiplayer)
+        INSERT INTO games (name, type_id, url, year, description, is_multiplayer)
         VALUES ($1, $2, $3, $4, $5, $6)
         RETURNING *;
     `,
