@@ -19,9 +19,8 @@ class GameForm extends Component {
             };
 
             addGame(game)
-                .then((res) => {
-                    console.log(res);
-                    // window.location = `game-list.html`;
+                .then((/*added*/) => {
+                    window.location = `game-list.html`;
                 })
                 .catch(err => {
                     console.log('game not saved. fool.', err);

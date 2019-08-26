@@ -46,17 +46,16 @@ app.get('/api/games', (req, res) => {
         });
 });
 
-app.get('/app/games/:id', (req, res) => {
+app.get('/api/games/:id', (req, res) => {
     const id = req.params.id;
-
     client.query(`
         SELECT
               g.*,
               t.name as type
         FROM  games g
         JOIN  types t
-        ON    c.type_id = t.id
-        WHERE c.id = &1
+        ON    g.type_id = t.id
+        WHERE g.id = $1
     `,
     [id]
     )

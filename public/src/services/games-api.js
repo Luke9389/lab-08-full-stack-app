@@ -8,7 +8,7 @@ export function getGames() {
 }
 
 export function getGame(id) {
-    const url = `${URL}/cats/${id}`;
+    const url = `${URL}/games/${id}`;
     return fetch(url)
         .then(response => response.json());
 }
